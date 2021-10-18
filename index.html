@@ -10,7 +10,7 @@
     />
     <meta name="keywords" content="słowa, kluczowe, opisujące, zawartość" />
     <meta name="author" content="Andrzej Gębala" />
-    <title>obiekty ćwiczenia</title>
+    <title>losowanie</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,15 +31,31 @@
 
   <body>
     <h1></h1>
+    <div class="name-creator">
+      <p class="add-name">KAŻDY GRACZ PODAJE SWOJE IMIĘ</p>
+      <input type="text" maxlength="10" class="player-1" placeholder="wpisz swoje imię...." />
+      <input type="text" maxlength="10" class="player-2" placeholder="wpisz swoje imię...." />
+    </div>
     <div class="object">
       <h2></h2>
     </div>
     <div class="buttons">
+      <!-- <h3 class="first-name"></h3> -->
       <button class="btn-1"></button>
       <button class="btn-2"></button>
-      <button class="btn-3"></button>
+      <!-- <h3 class="secend-name"></h3> -->
     </div>
-    <p></p>
+    <div class="lottery">
+      <input
+        type="text"
+        maxlength="1"
+        class="lottery-input"
+        placeholder="Wpisz cyfrę...."
+      />
+      <button class="btn-add"></button>
+    </div>
+
+    <p class="winner"></p>
 
     <script src="script.js"></script>
   </body>
