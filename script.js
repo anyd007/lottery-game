@@ -65,6 +65,7 @@ const addNameByPlayer2 = () => {
 const user1 = () => {
   //losowane cyfry od 1 do 9 dla gracza nr 1
   if (getNum.value.match(lotteryInput)) {
+    first.textContent = 'LOSUJ'
     first.disabled = false;
     numerShow.textContent = getNum.value;
     getNum.value = "";
@@ -77,6 +78,7 @@ const user1 = () => {
 };
 const user2 = () => {
   if (getNum.value.match(lotteryInput)) {
+    sec.textContent = 'LOSUJ'
     sec.disabled = false;
     numberShow2.textContent = getNum.value;
     getNum.value = "";
@@ -104,7 +106,7 @@ const winBtn2 = () => {
   //mechanizm losowania cyfry od 1 do 9
   let lotto2 = (sec.textContent = Math.floor(Math.random() * 10));
   if (sec.textContent === numberShow2.textContent) {
-    newUsr.textContent = `BRAWO ${fullName2.textContent}  trafiłeś  ${lotto2}!! Wygrałeś`;
+    newUsr.textContent = `BRAWO ${fullName2.textContent}  trafiłeś  ${lotto2}`;
     setTimeout(clear, 5000);
     para.textContent = `trafiłeś wybraną cyfrę za ${arr2.length} razem`;
     arr2.length = [];
@@ -118,7 +120,7 @@ const winBtn2 = () => {
 const winBtn1 = () => {
   let lotto3 = (first.textContent = Math.floor(Math.random() * 10));
   if (first.textContent === numerShow.textContent) {
-    newUsr.textContent = `BRAWO ${fullName1.textContent} trafiłeś ${lotto3} wygrałeś`;
+    newUsr.textContent = `BRAWO ${fullName1.textContent} trafiłeś ${lotto3}`;
     setTimeout(clear, 5000);
     para.textContent = `trafiłeś wybraną cyfrę za ${arr3.length} razem`;
     arr3.length = [];
